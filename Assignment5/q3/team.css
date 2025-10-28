@@ -1,0 +1,110 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f7f9fb;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+/* ===== Team Container ===== */
+.team-container {
+  display: flex; /* Flex layout for 3 columns */
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 40px 5%;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+/* ===== Team Card ===== */
+.team-card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for interactivity */
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Round image */
+  object-fit: cover;
+  border: 3px solid #004aad;
+  margin-bottom: 1em;
+}
+
+/* Headings and Text */
+.team-card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #004aad;
+  margin-bottom: 1em;
+}
+
+.team-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* ===== Highlighted Card (Team Lead) ===== */
+.lead {
+  background-color: #004aad;
+  color: white;
+  border: 3px solid #ffcc00; /* Different border */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lead img {
+  border-color: #ffcc00;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .team-card {
+    width: 100%; /* Single column on small screens */
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

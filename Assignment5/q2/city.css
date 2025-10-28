@@ -1,0 +1,92 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #d6336c;
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  position: sticky; /* stays on top */
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== General Section Styles ===== */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* Headings styling (different font sizes/weights) */
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.4); /* adds readability on bg images */
+  padding: 1em;
+  border-radius: 10px;
+}
+
+/* ===== Section 1: About (solid color background) ===== */
+.about {
+  background-color: #f48c06;
+  color: #fff;
+}
+
+/* ===== Section 2: Culture (linear gradient background) ===== */
+.culture {
+  background: linear-gradient(to right, #8338ec, #3a86ff);
+  color: #fff;
+}
+
+/* ===== Section 3: Tourism (background image + parallax effect) ===== */
+.tourism {
+  background-image: url('https://images.unsplash.com/photo-1575621272948-9a64f8b6c810');
+  background-size: cover;
+  background-attachment: fixed; /* creates parallax-like effect */
+  background-position: center;
+}
+
+/* ===== Section 4: Food (radial gradient + parallax effect) ===== */
+.food {
+  background: radial-gradient(circle at center, #ff9a9e, #ff6a88, #d53369);
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}

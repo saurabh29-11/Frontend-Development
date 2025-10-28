@@ -1,0 +1,68 @@
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.8;
+  padding: 40px 15%;
+}
+
+/* ===== Header Section ===== */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+header h3 {
+  font-size: 1rem;
+  color: #666;
+}
+
+.article-body p {
+  margin-bottom: 20px; /* spacing between paragraphs */
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+/* ===== First letter styling ===== */
+.article-body p::first-letter {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #004aad;
+}
+
+/* ===== First line styling ===== */
+.article-body p::first-line {
+  font-weight: bold;
+}
+
+/* ===== Mark (highlight) styling ===== */
+mark {
+  background-color: #fff3b0; /* custom yellow shade */
+  color: #000;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* ===== Blockquote styling ===== */
+blockquote {
+  border-left: 6px solid #004aad;
+  background-color: #eaf2ff;
+  padding: 15px 25px;
+  margin: 30px 0;
+  font-style: italic;
+  color: #222;
+}

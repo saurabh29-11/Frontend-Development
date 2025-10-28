@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table using TR/TD</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 20px;
+            color: #333;
+        }
+
+        /* Main Table Container */
+        .table-wrapper {
+            width: 100%;
+            max-width: 1300px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Table Styling */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse; /* Removes space between cell borders */
+        }
+
+        /* Table Header (th) and Cells (td) */
+        .data-table th, .data-table td {
+            padding: 16px;
+            text-align: left;
+            vertical-align: middle; /* Aligns content vertically */
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        /* Header specific styles */
+        .data-table thead th {
+            color: #868e96;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Body row hover effect */
+        .data-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* --- Reusable Component Styles (same as before) --- */
+
+        /* Flexbox for cells with multiple items (logo+text, avatar+text) */
+        .cell-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .text-primary {
+            font-weight: 600;
+            color: #212529;
+            font-size: 14px;
+        }
+        
+        .text-secondary {
+            font-size: 13px;
+            color: #868e96;
+        }
+
+        .avatar, .logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0; /* Prevents images from shrinking */
+        }
+        
+        /* Status Pills */
+        .status-pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+
+        .status-approved { background-color: #e6fcf5; color: #20c997; }
+        .status-awaiting { background-color: #fff4e6; color: #fd7e14; }
+        .status-rejected { background-color: #fff5f5; color: #fa5252; }
+        .status-processing { background-color: #f1f3f5; color: #868e96; }
+        .status-no-status { background-color: #f1f3f5; color: #868e96; }
+
+        /* Edit Button */
+        .edit-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #dee2e6;
+            color: #868e96;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .edit-btn:hover {
+            background-color: #868e96;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="table-wrapper">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Status</th>
+                <th>Joined</th>
+                <th>Emp. size</th>
+                <th>Location</th>
+                <th>Contact</th>
+                <th>Billing</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                    
+                        <div>
+                            <div class="text-primary">Crazyheads</div>
+                            <div class="text-secondary">Content placement indus...</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+                <td>May 11</td>
+                <td>11-50</td>
+                <td>Sunnyvale</td>
+                <td>
+                    <div class="cell-content">
+                       
+                        <div>
+                            <div class="text-primary">Angel Swift</div>
+                            <div class="text-secondary">Product Owner</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$20,863</div>
+                    <div class="text-secondary">Team 5+</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                       
+                        <div>
+                            <div class="text-primary">CharkaData</div>
+                            <div class="text-secondary">Voice processing and aud...</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-awaiting">Awaiting approv...</span></td>
+                <td>Apr 13</td>
+                <td>201-500</td>
+                <td>Silicon Valley</td>
+                <td>
+                    <div class="cell-content">
+                     
+                        <div>
+                            <div class="text-primary">Ronald Kapler</div>
+                            <div class="text-secondary">CTO</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$56,892</div>
+                    <div class="text-secondary">Enterprise</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                   
+                        <div>
+                            <div class="text-primary">Onhovered row</div>
+                            <div class="text-secondary">Additional data provided</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-no-status">No status</span></td>
+                <td>Apr 13</td>
+                <td>1-10</td>
+                <td>San Francisco</td>
+                <td>
+                    <div class="cell-content">
+             
+                        <div>
+                            <div class="text-primary">Michele Penzabara</div>
+                            <div class="text-secondary">The UI president</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$5,843</div>
+                    <div class="text-secondary">Single license</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+               
+                        <div>
+                            <div class="text-primary">Joplix Telecom</div>
+                            <div class="text-secondary">Connecting people all ove...</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+                <td>Jan 13</td>
+                <td>1-10</td>
+                <td>San Francisco</td>
+                <td>
+                    <div class="cell-content">
+              
+                        <div>
+                            <div class="text-primary">Adam Shawest</div>
+                            <div class="text-secondary">Product Owner</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$2,047</div>
+                    <div class="text-secondary">Single license</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                        
+                        <div>
+                            <div class="text-primary">Setproduct</div>
+                            <div class="text-secondary">Design systems for faste...</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-rejected">Rejected</span></td>
+                <td>Aug 13</td>
+                <td>11-50</td>
+                <td>Palo Alto</td>
+                <td>
+                    <div class="cell-content">
+                    
+                        <div>
+                            <div class="text-primary">Natalie Rufus</div>
+                            <div class="text-secondary">Delivering sexy UI since '11.</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$11,692</div>
+                    <div class="text-secondary">Team 2+</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                        
+                        <div>
+                            <div class="text-primary">Dofix Incorporated</div>
+                            <div class="text-secondary">We're maturing gently</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+                <td>Nov 14</td>
+                <td>201-500</td>
+                <td>San Francisco</td>
+                <td>
+                    <div class="cell-content">
+                        
+                        <div>
+                            <div class="text-primary">Laughing Poppo</div>
+                            <div class="text-secondary">Getting double boosted</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$112,039</div>
+                    <div class="text-secondary">Enterprise</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                    \
+                        <div>
+                            <div class="text-primary">HiDrews Studio</div>
+                            <div class="text-secondary">Content placement indus...</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+                <td>May 12</td>
+                <td>1-10</td>
+                <td>San Francisco</td>
+                <td>
+                    <div class="cell-content">
+                        
+                        <div>
+                            <div class="text-primary">Calvin Johnson</div>
+                            <div class="text-secondary">Content placement indus...</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$1,843</div>
+                    <div class="text-secondary">Single license</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                       
+                        <div>
+                            <div class="text-primary">Sexproduct</div>
+                            <div class="text-secondary">Delivering sexy UI since '11.</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-processing">Processing...</span></td>
+                <td>Dec 18</td>
+                <td>1-10</td>
+                <td>Saltv + Paltv</td>
+                <td>
+                    <div class="cell-content">
+                       
+                        <div>
+                            <div class="text-primary">Ronald Kapler</div>
+                            <div class="text-secondary">Product Owner</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$9,863</div>
+                    <div class="text-secondary">Team 5+</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell-content">
+                        
+                        <div>
+                            <div class="text-primary">Crazyheads</div>
+                            <div class="text-secondary">Content placement indus...</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+                <td>May 11</td>
+                <td>21-50</td>
+                <td>Sunnyvale</td>
+                <td>
+                    <div class="cell-content">
+                       
+                        <div>
+                            <div class="text-primary">Angel Swift</div>
+                            <div class="text-secondary">CTO</div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="text-primary">$20,863</div>
+                    <div class="text-secondary">Team 5+</div>
+                </td>
+                <td><div class="edit-btn">+</div></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

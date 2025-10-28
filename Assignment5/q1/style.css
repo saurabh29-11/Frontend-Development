@@ -1,0 +1,82 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f6fa; /* Light background */
+  color: #222; /* Dark text for contrast */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Helps footer stick to bottom */
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed; /* Stays on top when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #004aad;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em; /* em used for scalable spacing */
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem; /* rem used for consistent scaling */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5em;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Main Section ===== */
+main {
+  flex: 1;
+  margin-top: 90px; /* space below fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 5%; /* vh and % units used */
+}
+
+.intro {
+  text-align: center;
+  max-width: 600px;
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  width: 120px; /* px unit used */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  border: 3px solid #004aad;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto; /* Keeps footer at bottom */
+}
