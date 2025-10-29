@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Iframes in One File</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+    }
+
+    iframe {
+      width: 80%;
+      height: 300px;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Web Page with Two Iframes</h1>
+
+  <iframe title="My Introduction Page"
+    srcdoc="
+      <html>
+      <body style='background-color:#e8f5e9; text-align:center; font-family:Arial;'>
+        <h2>Hello! I'm Aryan Kumar 👋</h2>
+        <p>I’m currently learning web development and programming.<br>
+        I love exploring how websites work and enjoy building small projects.</p>
+      </body>
+      </html>">
+  </iframe>
+
+  <iframe title="My Favorite Hobby Page"
+    srcdoc="
+      <html>
+      <body style='background-color:#e3f2fd; text-align:center; font-family:Arial;'>
+        <h2>My Favorite Hobby 🎸</h2>
+        <p>My favorite hobby is playing guitar.<br>
+        It helps me relax and express creativity through music.</p>
+      </body>
+      </html>">
+  </iframe>
+</body>
+</html>

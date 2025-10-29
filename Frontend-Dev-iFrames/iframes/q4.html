@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frameset Example (All in One)</title>
+</head>
+
+<frameset rows="25%,75%">
+  <frame name="topFrame" srcdoc="
+    <html>
+      <head><title>Top Frame</title></head>
+      <body>
+        <h2>Navigation Links</h2>
+        <a href='home' target='bottomFrame'>Home</a> |
+        <a href='about' target='bottomFrame'>About</a> |
+        <a href='contact' target='bottomFrame'>Contact</a>
+      </body>
+    </html>
+  ">
+  <frame name="bottomFrame" srcdoc="
+    <html>
+      <head><title>Bottom Frame</title></head>
+      <body>
+        <h2>Welcome to My Website</h2>
+      </body>
+    </html>
+  ">
+</frameset>
+
+</html>
