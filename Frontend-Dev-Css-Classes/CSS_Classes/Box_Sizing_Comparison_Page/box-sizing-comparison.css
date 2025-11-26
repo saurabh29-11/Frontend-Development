@@ -65,7 +65,7 @@ h1 {
 }
 
 body::after {
-  content: "© Box-Sizing Demo by Harsh Sharma";
+  content: "© Box-Sizing Demo by Saurabh Saini";
   position: fixed;
   bottom: 10px;
   right: 20px;

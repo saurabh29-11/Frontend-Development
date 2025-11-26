@@ -85,7 +85,7 @@ p {
 }
 
 body::after {
-  content: "© Animation Demo by Harsh Sharma";
+  content: "© Animation Demo by Saurabh Saini";
   position: fixed;
   bottom: 10px;
   right: 20px;

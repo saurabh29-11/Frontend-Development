@@ -85,7 +85,7 @@ input:focus {
 }
 
 body::after {
-  content: "© Combined Effects Demo by Harsh Sharma";
+  content: "© Combined Effects Demo by Saurabh Saini";
   position: fixed;
   bottom: 10px;
   right: 20px;
